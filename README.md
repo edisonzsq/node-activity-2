@@ -12,14 +12,14 @@ npm install body-parser --save
 <br><br>
 ## Activity Objectives ##
 
-Stage 1: Database Configurations
+__Stage 1: Database Configurations__
 - Connect to database
 - Create ORM Object
 
-Stage 2: Apply ORM Operations
+__Stage 2: Apply ORM Operations__
 - Implement ORM operations on HTTP Endpoints
 
-Stage 3: Apply Relationships
+__Stage 3: Apply Relationships__
 - Associate Garage with Car (Car belongs to Garage, Garage has many Cars)
 - Create car object belongs to an exist garage object
 
