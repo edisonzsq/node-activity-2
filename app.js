@@ -1,17 +1,18 @@
 const express = require("express");
 const app = express();
+app.use(require('body-parser').json());
 const port = 3000;
 const db = require("./database");
 
 // === Initialize Database === //
-db.init().then((models) => {
+db.init().then((model) => {
   // === Implementations === //
-  app.post("/garage", (req, res) => {
-    // Add a garage to db
+  app.post("/garage", async (req, res) => {
+    res.send(await model.Garage.create(req.body));
   });
 
-  app.get("/garage", (req, res) => {
-    // Get all garages
+  app.get("/garage", async (req, res) => {
+    res.send(await model.Garage.findAll());
   });
 
   app.post("/garage/:garageId/car", (req, res) => {
