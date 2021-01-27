@@ -2,9 +2,11 @@
 ## Installation ##
 This activity continues from https://github.com/edisonzsq/node-activity. 
 
-We will be using sequelize in this activity. Install sequelize by typing the following in your command line/terminal:
+We will be using additional modules in this activity. Install them by typing the following in your command line/terminal:
 ```shell
 npm install sequelize --save
+npm install sqlite@3 --save
+npm install body-parser --save
 ```
 
 <br><br>
@@ -19,12 +21,12 @@ Stage 5: Associate Garage.js with Car.js with many-to-one relationship.</i>
 <br><br>
 ## HTTP Endpoints ##
 
-The following endpoints will not be having any implementation. It will return a string describing what it should be doing.
+We will implement the following endpoints with database.
 
-|Method | Endpoint              | Returns                |
+|Method | Endpoint              | Description                |
 | :----:|:---------------------|-----------------------:|
 | POST  | /garage               | add a garage
-| GET   | /garage               | retrieve all garage|
-| POST  | /garage/:garageId/car | add a car to garage|
-| DELETE| /car/:id              | delete a car       |
+| GET   | /garage               | get all garage|
+| POST  | /garage/:garageId/car | add a car and associate it to a garage|
+| GET   | /car              | get all cars       |
 
