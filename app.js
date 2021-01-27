@@ -1,18 +1,22 @@
 const express = require("express");
 const app = express();
 const port = 3000;
-const garage = require('./routes/garage'); // Import the module from garage.js
 
-app.use('/garage', garage); // Use garage.js file to handle every endpoint that starts with /garage
 
-// Get a member
-app.get("/house/member/:id", function (req, res) {
-  res.send("retrieved a member of the house with id" + req.params.id);
+app.post('/garage', (req, res) => {
+    // Add a garage to db
 });
 
-// Add a member
-app.post("/house/member", function (req, res) {
-  res.send("added a member to the house");
+app.get('/garage', (req, res) => {
+    // Get all garages
+});
+
+app.post('/garage/:garageId/car', (req, res) => {
+    // Add a car to garage based on given garageId
+});
+
+app.get('/car', (req, res) => {
+    // Get all cars
 });
 
 console.log("Listening to port "+port);
