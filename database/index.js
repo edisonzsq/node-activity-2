@@ -18,6 +18,10 @@ const Car = sequelize.define("Car", {
   },
 });
 
+// Create relationship
+Car.belongsTo(Garage);
+Garage.hasMany(Car)
+
 // Sync ORM entities with database tables
 const init = async () => {
   await sequelize.sync({ force: true });
