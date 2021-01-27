@@ -12,11 +12,16 @@ npm install body-parser --save
 <br><br>
 ## Activity Objectives ##
 
-Stage 1: Create a class in Garage.js.<br>
-Stage 2: Extend it with [Sequelize ORM](https://www.npmjs.com/package/sequelize).<br>
-Stage 3: Create a garage record in database.<br>
-Stage 4: Create a class in Car.js<br>
-Stage 5: Associate Garage.js with Car.js with many-to-one relationship.</i>
+Stage 1: Database Configurations
+- Connect to database
+- Create ORM Object
+
+Stage 2: Apply ORM Operations
+- Implement ORM operations on HTTP Endpoints
+
+Stage 3: Apply Relationships
+- Associate Garage with Car (Car belongs to Garage, Garage has many Cars)
+- Create car object belongs to an exist garage object
 
 <br><br>
 ## HTTP Endpoints ##
